@@ -1,5 +1,5 @@
-# Install node v10
-FROM node:10
+# Install node v15.3
+FROM node:15.3
 
 # Set the workdir /var/www/otp-engine
 WORKDIR /var/www/otp-engine
