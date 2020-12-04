@@ -76,6 +76,10 @@ app.get('/', function (req, res) {
   res.send('Healthy');
 });
 
+app.get('/hello', function (req, res) {
+  res.send('Healthy');
+});
+
 app.get('/pre-post', function (req, res) {
   (async () => {
     const preProcessResponse = await pool.exec({type:'pre-process',input:'input'});
@@ -109,7 +113,7 @@ app.get('/pickWorker/:delaySecond', function (req, res) {
   })();
 });
 
-app.listen(3000, function () {
+app.listen(3000,'0.0.0.0' ,function () {
   console.log('Example app listening on port 3000!');
 });
 
